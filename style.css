@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-shade: #9096ee;
+  --gray-shade: #d3d3d373;
+  --text-color: #383838;
+}
+
+a,
+img,
+button {
+  cursor: pointer;
+}
+a:hover,
+button:hover {
+  opacity: 0.7;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+  background: var(--gray-shade);
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.header {
+  padding: 1rem 4rem;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-bar {
+  min-width: 600px;
+  padding: 6px;
+  border: none;
+  outline: none;
+  background: var(--gray-shade);
+  font-size: 1rem;
+  border-radius: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.profile p {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.bottom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.welcome > img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.greeting {
+  font-weight: 600;
+}
+
+.profile-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.control-buttons > button {
+  background: var(--blue-shade);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 33px;
+}
+
+.sidebar {
+  grid-row: 1/3;
+  background: var(--blue-shade);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.sidebar img {
+  width: 40px;
+}
+
+.title-sidebar {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+.menu img {
+  padding: 0.6rem;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu a:nth-child(6) {
+  margin-bottom: 2rem;
+}
+
+.article {
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  height: fit-content;
+  max-width: 1400px;
+}
+
+.projects {
+  grid-row: span 2;
+}
+
+.article-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 400px;
+  padding: 2rem 1.5rem;
+  background: white;
+  border-left: 10px solid rgb(3, 210, 3);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card-text {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.card-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+}
+
+.card-buttons > img {
+  width: 25px;
+}
+
+.announcements {
+  align-self: start;
+}
+
+.announcements-container {
+  background: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 1.5rem;
+}
+
+.announcement-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.announcement-text {
+  color: var(--text-color);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.announcements-container hr {
+  margin: 1rem 0;
+}
+
+.trending {
+  align-self: end;
+}
+
+.trending-container {
+  background: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.trending-profile {
+  display: flex;
+  gap: 1rem;
+}
+
+.trending-profile > img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.trending-name {
+  font-weight: 600;
+}
+.trending-text {
+  color: var(--text-color);
+}
